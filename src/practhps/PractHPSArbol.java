@@ -8,15 +8,16 @@ package practhps;
  *
  * @author jorge
  */
-public class PractHPS {
+public class PractHPSArbol {
     
     class Nodo{
-        String info;
+        String operador;
+        int info;
         Nodo izq, der;
     }
     Nodo raiz;
     
-    public PractHPS(){
+    public PractHPSArbol(){
         raiz = null;
     }
     
@@ -24,7 +25,7 @@ public class PractHPS {
       {
           Nodo nuevo;
           nuevo = new Nodo ();
-          nuevo.info = info;
+          nuevo.operador = info;
           nuevo.izq = null;
           nuevo.der = null;
           if (raiz == null) {
