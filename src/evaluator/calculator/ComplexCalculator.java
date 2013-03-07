@@ -2,13 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package practhps;
+package evaluator.calculator;
+
+import evaluator.Calculator;
 
 /**
  *
  * @author jorge
  */
-public class Nodo {
-    
+public class ComplexCalculator extends Calculator{
     
 }
