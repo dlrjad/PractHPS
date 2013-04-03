@@ -8,4 +8,8 @@ public class Double extends Type<java.lang.Double> {
         super(value);
     }
     
+    public Double(String value) {
+        super(java.lang.Double.valueOf(value));
+    }
+    
 }

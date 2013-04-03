@@ -1,4 +1,4 @@
-package evaluator.node;
+package evaluator.token;
 
 import evaluator.Type;
 import evaluator.type.Double;
@@ -11,7 +11,7 @@ public class NamedConstant {
     private final String name;
     private final Type value;
 
-    private NamedConstant(String name, Type value) {
+    private NamedConstant(String name, Type<?> value) {
         this.name = name;
         this.value = value;
     }
@@ -22,7 +22,7 @@ public class NamedConstant {
     }
     
     private static void checkConstants() {
-        if (constants != null) return;
+        if (constants != null){ return;}
         constants = new HashMap<>();
         putConstant(new NamedConstant("PI", new Double(Math.PI)));
 

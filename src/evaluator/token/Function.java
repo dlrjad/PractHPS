@@ -1,4 +1,4 @@
-package evaluator.node;
+package evaluator.token;
 
 public class Function {
 

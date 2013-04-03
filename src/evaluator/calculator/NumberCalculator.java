@@ -1,49 +1,78 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package evaluator.calculator;
 
 import evaluator.Calculator;
-import evaluator.annotation.Function;
-import evaluator.annotation.Operator;
+import evaluator.annotation.Constant;
+import evaluator.annotation.Operation;
+import evaluator.type.Double;
+import evaluator.type.Integer;
 
-/**
- *
- * @author jorge
- */
-public class NumberCalculator extends Calculator {
+public class NumberCalculator implements Calculator {
 
-    @Function
-    public Double abs(Double x) {
-        return Math.abs(x);
+    public NumberCalculator() {
     }
-
-    @Function("sqrt")
-    public Double squareRoot(Double x) {
-        return Math.sqrt(x);
-    }
-
-    @Operator("+")
-    public Double add(Double x, Double y) {
-        return x + y;
-    }
-
-    @Operator("+")
-    public Double add(Double x, Integer y) {
-        return x + y;
-    }
-
-    public Double multDouble(Double x, Double y) {
-        return x * y;
-    }
-
-    public Double divDouble(Double x, Double y) {
-        return x / y;
-    }
-
-    public Double substractDouble(Double x, Double y) {
-        return x - y;
-    }
+    @Constant
+    public static final double PI = Math.PI;
     
+    @Constant
+    public static final double E = Math.E;
+
+    @Operation("+")
+    public static Double add(Double p0, Double p1) {
+        return new Double(p0.getValue() + p1.getValue());
+    }
+
+    @Operation("+")
+    public static Double add(Double p0, Integer p1) {
+        return new Double(p0.getValue() + p1.getValue());
+    }
+
+    @Operation("+")
+    public static Double add(Integer p0, Double p1) {
+        return new Double(p0.getValue() + p1.getValue());
+    }
+
+    @Operation("+")
+    public static Integer add(Integer p0, Integer p1) {
+        return new Integer(p0.getValue() + p1.getValue());
+    }
+
+    @Operation("-")
+    public static Double substract(Double p0, Double p1) {
+        return new Double(p0.getValue() - p1.getValue());
+    }
+
+    @Operation("-")
+    public static Double substract(Double p0, Integer p1) {
+        return new Double(p0.getValue() - p1.getValue());
+    }
+
+    @Operation("-")
+    public static Double substract(Integer p0, Double p1) {
+        return new Double(p0.getValue() - p1.getValue());
+    }
+
+    @Operation("-")
+    public static Integer substract(Integer p0, Integer p1) {
+        return new Integer(p0.getValue() - p1.getValue());
+    }
+
+    @Operation("*")
+    public static Double multiply(Double p0, Double p1) {
+        return new Double(p0.getValue() * p1.getValue());
+    }
+
+    @Operation("*")
+    public static Double multiply(Double p0, Integer p1) {
+        return new Double(p0.getValue() * p1.getValue());
+    }
+
+    @Operation("*")
+    public static Double multiply(Integer p0, Double p1) {
+        return new Double(p0.getValue() * p1.getValue());
+    }
+
+    @Operation("*")
+    public static Integer multiply(Integer p0, Integer p1) {
+        return new Integer(p0.getValue() * p1.getValue());
+    }
 }
