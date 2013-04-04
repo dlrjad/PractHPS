@@ -36,6 +36,26 @@ public class NumberCalculator implements Calculator {
     public static Double abs(Double p) {
         return new Double(Math.abs(p.getValue()));
     }
+    
+    @Function("sqrt")
+    public static Double sqrt(Double p) {
+        return new Double(Math.sqrt(p.getValue()));
+    }
+    
+    @Function("sin")
+    public static Double sin(Double p) {
+        return new Double(Math.sin(p.getValue()));
+    }
+    
+    @Function("cos")
+    public static Double cos(Double p) {
+        return new Double(Math.cos(p.getValue()));
+    }
+    
+    @Function("tan")
+    public static Double tan(Double p) {
+        return new Double(Math.tan(p.getValue()));
+    }
 
     @Operation("+")
     public static Double add(Double p0, Double p1) {

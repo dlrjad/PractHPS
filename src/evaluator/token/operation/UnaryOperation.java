@@ -5,13 +5,13 @@ import evaluator.Operator;
 import evaluator.Token;
 import evaluator.Type;
 
-public class Unary extends Token{
+public class UnaryOperation extends Token{
 
     private final Token child;
     private final Operator operator;
     private CalculatorSolver calculatorSolver= new CalculatorSolver();
 
-    public Unary(Token child, Operator operator) {
+    public UnaryOperation(Token child, Operator operator) {
         this.child = child;
         this.operator = operator;
     }

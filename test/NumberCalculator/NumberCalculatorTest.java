@@ -2,14 +2,28 @@ package NumberCalculator;
 
 import evaluator.Token;
 import evaluator.operator.BinaryOperator;
+import evaluator.operator.UnaryOperator;
 import evaluator.token.Constant;
 import evaluator.token.operation.BinaryOperation;
+import evaluator.token.operation.UnaryOperation;
 import evaluator.type.Double;
 import evaluator.type.Integer;
 import junit.framework.Assert;
 import org.junit.Test;
 
 public class NumberCalculatorTest {
+    
+    @Test
+    public void doubleAbsTest() {
+        Token token = new UnaryOperation(new Constant(new Double(-2.5)), UnaryOperator.abs);
+        Assert.assertEquals(2.5, token.evaluate().getValue());
+    }
+    
+    @Test
+    public void doubleSqrtTest() {
+        Token token = new UnaryOperation(new Constant(new Double(2.25)), UnaryOperator.sqrt);
+        Assert.assertEquals(1.5, token.evaluate().getValue());
+    }
     
     @Test
     public void doubleDoubleAddTest() {

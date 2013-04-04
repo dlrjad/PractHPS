@@ -1,5 +1,6 @@
 package evaluator;
 
+import evaluator.annotation.Function;
 import evaluator.annotation.Operation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,8 +26,9 @@ public class CalculatorSolver {
 
     private void addMethods(Class<?> theClass) {
         for (Method method : theClass.getDeclaredMethods()) {
-            if (!method.isAnnotationPresent(Operation.class)) continue;
+            if ((!method.isAnnotationPresent(Operation.class))&&(!method.isAnnotationPresent(Function.class))) continue;
             methodBySignature.put(getSignature(method), method);
+            
         }
     }
     
