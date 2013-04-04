@@ -2,19 +2,40 @@ package evaluator.calculator;
 
 import evaluator.Calculator;
 import evaluator.annotation.Constant;
+import evaluator.annotation.Function;
 import evaluator.annotation.Operation;
 import evaluator.type.Double;
 import evaluator.type.Integer;
 
 public class NumberCalculator implements Calculator {
+    
+    private final Range range;
 
-    public NumberCalculator() {
+    public NumberCalculator(Range range) {
+        this.range = range;
     }
+    public Range getRange() {
+        return range;
+    }
+
+    public java.lang.Double getUpperLimit() {
+        return range.getUpperLimit();
+    }
+
+    public java.lang.Double getLowerLimit() {
+        return range.getLowerLimit();
+    }
+    
     @Constant
     public static final double PI = Math.PI;
     
     @Constant
     public static final double E = Math.E;
+    
+    @Function("abs")
+    public static Double abs(Double p) {
+        return new Double(Math.abs(p.getValue()));
+    }
 
     @Operation("+")
     public static Double add(Double p0, Double p1) {
