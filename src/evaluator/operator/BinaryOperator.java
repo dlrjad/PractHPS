@@ -16,6 +16,10 @@ public class BinaryOperator extends Operator {
     
     @Operators
     public static final BinaryOperator EQUAL = new BinaryOperator("=", "equal", 3);
+    @Operators
+    public static final BinaryOperator LESS = new BinaryOperator("<", "less", 3);
+    @Operators
+    public static final BinaryOperator HIGHER = new BinaryOperator(">", "higher", 3);
 
     private BinaryOperator(String symbol, String name, int precedence) {
         super(symbol, name, precedence);
