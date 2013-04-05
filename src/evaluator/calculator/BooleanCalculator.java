@@ -8,6 +8,7 @@ import evaluator.type.Double;
 public class BooleanCalculator implements Calculator{
     
     public BooleanCalculator(){
+        
     }
     
     @Operation("=")

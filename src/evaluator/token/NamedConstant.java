@@ -25,6 +25,7 @@ public class NamedConstant {
         if (constants != null){ return;}
         constants = new HashMap<>();
         putConstant(new NamedConstant("PI", new Double(Math.PI)));
+        putConstant(new NamedConstant("E", new Double(Math.E)));
 
     }
 
