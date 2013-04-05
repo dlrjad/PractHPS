@@ -15,11 +15,11 @@ public class BinaryOperator extends Operator {
     public static final BinaryOperator DIVISION = new BinaryOperator("/", "division", 2);
     
     @Operators
-    public static final BinaryOperator EQUAL = new BinaryOperator("=", "equal", 3);
+    public static final BinaryOperator EQUAL = new BinaryOperator("=", "equal", 1);
     @Operators
-    public static final BinaryOperator LESS = new BinaryOperator("<", "less", 3);
+    public static final BinaryOperator LESS = new BinaryOperator("<", "less", 1);
     @Operators
-    public static final BinaryOperator HIGHER = new BinaryOperator(">", "higher", 3);
+    public static final BinaryOperator HIGHER = new BinaryOperator(">", "higher", 1);
 
     private BinaryOperator(String symbol, String name, int precedence) {
         super(symbol, name, precedence);
