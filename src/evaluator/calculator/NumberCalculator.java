@@ -18,12 +18,12 @@ public class NumberCalculator implements Calculator {
         return range;
     }
 
-    public java.lang.Double getUpperLimit() {
-        return range.getUpperLimit();
+    public Double getUpperLimit() {
+        return new Double(range.getUpperLimit());
     }
 
-    public java.lang.Double getLowerLimit() {
-        return range.getLowerLimit();
+    public Double getLowerLimit() {
+        return new Double(range.getLowerLimit());
     }
     
     @Constant

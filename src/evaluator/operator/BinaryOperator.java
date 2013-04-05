@@ -13,6 +13,9 @@ public class BinaryOperator extends Operator {
     public static final BinaryOperator MULTIPLY = new BinaryOperator("*", "multiply", 2);
     @Operators
     public static final BinaryOperator DIVISION = new BinaryOperator("/", "division", 2);
+    
+    @Operators
+    public static final BinaryOperator EQUAL = new BinaryOperator("=", "equal", 3);
 
     private BinaryOperator(String symbol, String name, int precedence) {
         super(symbol, name, precedence);
